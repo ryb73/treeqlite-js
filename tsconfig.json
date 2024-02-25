@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "isolatedModules": true,
+    "module": "esnext",
+    "moduleResolution": "Bundler",
+    "noEmit": false,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
+    "outDir": "lib",
+    "strict": true,
+    "target": "es2022"
+  },
+  "exclude": ["node_modules", "lib"],
+  "include": [".*", "*", "**/*"]
+}
