@@ -19,7 +19,7 @@
     }
   },
   "files": [
-    "lib"
+    "lib/src"
   ],
   "devDependencies": {
     "@emotion/eslint-plugin": "^11.11.0",
