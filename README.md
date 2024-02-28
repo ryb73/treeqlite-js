@@ -1,1 +1,1 @@
-# treeqlite-js
+# treeqlite-node

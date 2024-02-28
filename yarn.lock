@@ -10049,9 +10049,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"treeqlite-js@workspace:.":
+"treeqlite-node@workspace:.":
   version: 0.0.0-use.local
-  resolution: "treeqlite-js@workspace:."
+  resolution: "treeqlite-node@workspace:."
   dependencies:
     "@emotion/eslint-plugin": "npm:^11.11.0"
     "@faker-js/faker": "npm:^8.4.1"

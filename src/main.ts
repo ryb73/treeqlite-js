@@ -9,7 +9,7 @@ import { left as eLeft, right as eRight, isLeft } from "fp-ts/lib/Either.js";
 import { invert, mapValues } from "lodash-es";
 import type { RustResult, TranslatedQuery } from "pbsql/nodejs";
 
-const debug = debugModule(`treeqlite-js`);
+const debug = debugModule(`treeqlite-node`);
 
 type Config = {
   rootPath: string;
@@ -150,7 +150,7 @@ function executeQuery<T>(
       throw error;
     }
     throw new Error(
-      `Non-Error thrown in treeqlite-js::executeQuery: ${String(error)}`,
+      `Non-Error thrown in treeqlite-node::executeQuery: ${String(error)}`,
       { cause: error },
     );
   } finally {
