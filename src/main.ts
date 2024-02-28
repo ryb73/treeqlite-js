@@ -78,10 +78,10 @@ function executeQuery<T>(
   runSqliteQuery: (
     sqliteDb: BetterSqlite3.Database,
     query: string,
-    params: readonly unknown[],
+    params: unknown[],
   ) => T,
   query: string,
-  params: readonly unknown[] = [],
+  params: unknown[] = [],
 ) {
   const translateRustResult = translateSql(query);
   const translateResult = rustResultToEither(translateRustResult);
@@ -162,7 +162,7 @@ function executeQuery<T>(
 function doBs3Run(
   sqliteDb: BetterSqlite3.Database,
   query: string,
-  params: readonly unknown[] = [],
+  params: unknown[] = [],
 ) {
   return sqliteDb.prepare(query).run(params);
 }
@@ -170,7 +170,7 @@ function doBs3Run(
 function doBs3All(
   sqliteDb: BetterSqlite3.Database,
   query: string,
-  params: readonly unknown[] = [],
+  params: unknown[] = [],
 ) {
   return sqliteDb.prepare(query).all(params);
 }
@@ -184,18 +184,18 @@ export function tqlQuery(
   translateSql: (query: string) => RustResult<TranslatedQuery, string>,
   config: Config,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ): QueryResult {
   return executeQuery(translateSql, config, doBs3Run, query, params);
 }
 
-type AllResult = readonly unknown[];
+type AllResult = unknown[];
 
 export function tqlAll(
   translateSql: (query: string) => RustResult<TranslatedQuery, string>,
   config: Config,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ): AllResult {
   return executeQuery(translateSql, config, doBs3All, query, params);
 }
@@ -213,7 +213,7 @@ export type ExecResult =
 function doBs3Exec(
   sqliteDb: BetterSqlite3.Database,
   query: string,
-  params: readonly unknown[] = [],
+  params: unknown[] = [],
 ): ExecResult {
   const statement = sqliteDb.prepare(query);
   if (statement.reader) {
@@ -229,7 +229,7 @@ export function tqlExec(
   translateSql: (query: string) => RustResult<TranslatedQuery, string>,
   config: Config,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ): ExecResult {
   return executeQuery(translateSql, config, doBs3Exec, query, params);
 }

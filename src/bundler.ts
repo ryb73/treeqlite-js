@@ -8,7 +8,7 @@ export type { ExecResult, TreeQLiteConfig, QueryResult } from "./main.js";
 function tqlAllBundler(
   config: TreeQLiteConfig,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ) {
   return tqlAll(translateSql, config, query, params);
 }
@@ -17,7 +17,7 @@ export { tqlAllBundler as tqlAll };
 function tqlExecBundler(
   config: TreeQLiteConfig,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ) {
   return tqlExec(translateSql, config, query, params);
 }
@@ -26,7 +26,7 @@ export { tqlExecBundler as tqlExec };
 function tqlQueryBundler(
   config: TreeQLiteConfig,
   query: string,
-  params?: readonly unknown[],
+  params?: unknown[],
 ) {
   return tqlQuery(translateSql, config, query, params);
 }
