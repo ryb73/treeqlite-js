@@ -42,7 +42,7 @@
     "debug": "^4.3.4",
     "fp-ts": "^2.16.2",
     "lodash-es": "^4.17.21",
-    "pbsql": "^0.2.0"
+    "pbsql": "^0.2.3"
   },
   "peerDependencies": {
     "better-sqlite3": "^9.4.2"

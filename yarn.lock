@@ -8251,10 +8251,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pbsql@npm:^0.2.0":
-  version: 0.2.0
-  resolution: "pbsql@npm:0.2.0"
-  checksum: 10/d099337759e89df7190763554f80a64cecbe2b23c9cdf98c4e073dd7c524b78466a79c938e3aeb3316e9199625eb8ea9f0c433f4da2d82032c25b212244bd8d6
+"pbsql@npm:^0.2.3":
+  version: 0.2.3
+  resolution: "pbsql@npm:0.2.3"
+  checksum: 10/fdaab1a927cdf197967ff88735b862e40bc40279aa00fab15c6191b889f0897b58e9426e59c634388fb5002b6d4f1b2b480442bf2d8e182df7f2434c61b89b6f
   languageName: node
   linkType: hard
 
@@ -10069,7 +10069,7 @@ __metadata:
     eslint-plugin-deprecation: "npm:^2.0.0"
     fp-ts: "npm:^2.16.2"
     lodash-es: "npm:^4.17.21"
-    pbsql: "npm:^0.2.0"
+    pbsql: "npm:^0.2.3"
     typescript: "npm:~5.2.0"
     vitest: "npm:^1.3.1"
   peerDependencies:
