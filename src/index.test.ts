@@ -1,4 +1,4 @@
-import { mkdirSync, rmdirSync } from "fs";
+import { existsSync, mkdirSync, rmdirSync } from "fs";
 import { faker } from "@faker-js/faker";
 import { SqliteError } from "better-sqlite3";
 // eslint-disable-next-line @typescript-eslint/no-shadow
@@ -94,8 +94,9 @@ function generatePlaylistSongData(
 }
 
 beforeAll(() => {
-  // clear the test-db directory
-  rmdirSync(tql.rootPath, { recursive: true });
+  if (existsSync(tql.rootPath)) {
+    rmdirSync(tql.rootPath, { recursive: true });
+  }
   mkdirSync(tql.rootPath, { recursive: true });
 
   // create some tables
